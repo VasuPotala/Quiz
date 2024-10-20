@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script>
+        function showResult() {
+            // Get URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            const score = params.get('score');
+
+            // Display name and score
+            document.getElementById('name').innerText = name;
+            document.getElementById('score').innerText = "Your score: " + score + "/7";
+        }
+    </script>
+</head>
+<body onload="showResult()">
+    <h1 id="name"></h1>
+    <h2 id="score"></h2>
+</body>
+</html>
