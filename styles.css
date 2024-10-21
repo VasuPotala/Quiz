@@ -1,0 +1,46 @@
+body
+{
+font-size: large;
+margin:30px;
+background-image: url('images/home.jpg') ;
+background-repeat: no-repeat;
+background-size: cover;
+}
+p{
+    color: cyan;
+    font-weight: bolder;
+   
+}
+#username
+{
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid white;
+}
+
+input[type="text"]:focus {
+    border: none;
+    outline: none;
+    color: cyan;
+    text-align:center;
+  }
+  
+.btn
+{
+    border-radius:10px;
+    background-color:#049599;
+    color:#fff;
+    width: 6em;
+    height: 2em;
+    font-size:20px;
+    border: none;
+}
+.btn:hover{
+    border: block;
+    border-color: aqua;
+    background-color: blue;
+    box-shadow: 12px 12px 12px rgba(0,0,0,0.3);
+}
+input[type="radio"], label {
+    cursor: pointer;
+}

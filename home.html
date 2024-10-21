@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function res(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var count = 0;
+
+            var option1 = document.querySelector('input[name="one"]:checked').value;
+            var option2 = document.querySelector('input[name="two"]:checked').value;
+            var option3 = document.querySelector('input[name="three"]:checked').value;
+            var option4 = document.querySelector('input[name="four"]:checked').value;
+            var option5 = document.querySelector('input[name="five"]:checked').value;
+            var option6 = document.querySelector('input[name="six"]:checked').value;
+            var option7 = document.querySelector('input[name="seven"]:checked').value;
+            var option8 = document.querySelector('input[name="eight"]:checked').value;
+            var option9 = document.querySelector('input[name="nine"]:checked').value;
+            var option10 = document.querySelector('input[name="ten"]:checked').value;
+            var option11 = document.querySelector('input[name="eleven"]:checked').value;
+            var option12 = document.querySelector('input[name="twelve"]:checked').value;
+
+            if (option1 == "object_oriented") count++;
+            if (option2 == "both A and B") count++;
+            if (option3 == "js") count++;
+            if (option4 == "google") count++;
+            if (option5 == "meta") count++;
+            if (option6 == "ctable") count++;
+            if (option7 == "database") count++;
+            if (option8 == "CPU") count++;
+            if (option9 == "Assembler") count++;
+            if (option10 == "return") count++;
+            if (option11 == "&") count++;
+            if (option12 == "Float") count++;
+
+            var name = document.getElementById('username').value;
+
+            // Redirect to result.html with the name and score in URL parameters
+            window.location.href = "result.html?name=" + encodeURIComponent(name) + "&score=" + count;
+        }
+    </script>
+</head>
+<body>
+
+<form onsubmit="res(event)">
+    Enter your name : <input type="text" id="username" required><br><br>
+
+    <p>1. Javascript is an ____________ language.</p>
+    <input type="radio" value="object_oriented" name="one" id="o11" required><label for='o11'>object_oriented</label><br>
+    <input type="radio" value="object_based" name="one" id="o12"><label for='o12'>object_based</label><br>
+    <input type="radio" value="procedural" name="one" id="o13"><label for='o13'>procedural</label><br>
+    <input type="radio" value="none" name="one" id="o14"><label for='o14'>none</label><br><br>
+    <p>2. Which of the following keywords is used to define a variable in JavaScript ?</p>
+<input type="radio" value="var" name="two" id='o21'onclick=(option2=(this.value))><label for="o21">Var</label> <br>
+<input type="radio" value="let" name="two" id='o22' onclick=(option2=(this.value))><label for="o22">Let</label><br>
+<input type="radio" value="both A and B" id='o23' name="two" onclick=(option2=(this.value))><label for="o23">both A and B</label><br>
+<input type="radio" value="none" name="two" id='o24' onclick=(option2=(this.value))><label for="o24">none of this</label><br><br>
+<p>3. What is the use of <no script> tag in javascript ?</p>
+<input type="radio" value="js" name="three"  id='o31' onclick=(option3=(this.value))><label for="o31">The contents are displayed by non js_based browsers</label><br>
+<input type="radio" value="clear" name="three"  id='o32' onclick=(option3=(this.value))><label for="o32">clears all the cookies and cache .</label><br>
+<input type="radio" value="a and b" name="three"  id='o33' onclick=(option3=(this.value))><label for="o33">both A and B</label><br>
+<input type="radio" value="js_based" name="three"  id='o34' onclick=(option3=(this.value))><label for="o34">none of the above</label><br><br>
+<p>4. Which of the following is not an example of DBMS ?</p>
+<input type="radio" value="mysql" name="four" id='o41' onclick=(option4=(this.value))><label for="o41"> mySql</label><br>
+<input type="radio" value="microsoft acess" name="four" id='o42' onclick=(option4=(this.value))><label for="o42">Microsoft acess</label><br>
+<input type="radio" value="IBM" name="four" id='o43' onclick=(option4=(this.value))><label for="o43">IBM DB2</label><br>
+<input type="radio" value="google" name="four" id='o44' onclick=(option4=(this.value))><label for="o44">Google</label><br><br>
+<p>5. What is the information about data is called ?</p>
+<input type="radio" value="hype" name="five" id='o51' onclick=(option5=(this.value))><label for="o51">Hyper data</label><br>
+<input type="radio" value="tera" name="five" id='o52' onclick=(option5=(this.value))><label for="o52">Tera data</label><br>
+<input type="radio" value="meta" name="five" id='o53' onclick=(option5=(this.value))><label for="o53">Meta data</label><br>
+<input type="radio" value="relation" name="five" id='o54' onclick=(option5=(this.value))><label for="o54">Relation</label><br><br>
+<p>6. What does RDBMS consist of ?</p>
+<input type="radio" value="crecord" name="six" id="o61" onclick=(option6=(this.value))><label for="o61">Collection of records</label><br>
+<input type="radio" value="ckey" name="six" id="o62" onclick=(option6=(this.value))><label for="o62">Collection of keys</label><br>
+<input type="radio" value="ctable" name="six" id="o63" onclick=(option6=(this.value))><label for="o63">Collection of tables</label><br>
+<input type="radio" value="cfield" name="six" id="o64" onclick=(option6=(this.value))><label for="o64">Collection of fields</label><br><br>
+<p>7. The DBMS acts as an interface between _________ and _________ of an enterprise-class system.</p>
+<input type="radio" value="data,dbms" name="seven" id="o71" onclick=(option7=(this.value))><label for="o71">data and the DBMS</label><br>
+<input type="radio" value="app,sql" name="seven" id="o72" onclick=(option7=(this.value))><label for="o72">Application and Sql</label><br>
+<input type="radio" value="database" name="seven" id="o73" onclick=(option7=(this.value))><label for="o73">database application and database</label><br>
+<input type="radio" value="user and software" name="seven" id="o74" onclick=(option7=(this.value))><label for="o74">The user and the software</label><br><br>
+
+<p>8. The brain of any computer system is?.</p>
+<input type="radio" value="ALU" name="eight" id="o81" onclick=(option8=(this.value))><label for="o81">ALU</label><br>
+<input type="radio" value="Memory" name="eight" id="o82" onclick=(option8=(this.value))><label for="o82">Memory</label><br>
+<input type="radio" value="CPU" name="eight" id="o83" onclick=(option8=(this.value))><label for="o83">CPU</label><br>
+<input type="radio" value="Control Unit" name="eight" id="o84" onclick=(option8=(this.value))><label for="o84">Control Uint</label><br><br>
+<p>9. A computer program that converts assembly language to machine language is</p>
+<input type="radio" value="Compiler" name="nine" id="o91" onclick=(option9=(this.value))><label for="o91">Compiler</label><br>
+<input type="radio" value="Interpreter" name="nine" id="o92" onclick=(option9=(this.value))><label for="o92">Interpreter</label><br>
+<input type="radio" value="Assembler" name="nine" id="o93" onclick=(option9=(this.value))><label for="o93">Assembler</label><br>
+<input type="radio" value="Comparator" name="nine" id="o94" onclick=(option9=(this.value))><label for="o94">Comparator</label><br><br>
+<p>10. The keyword used to transfer control from a function back to the calling function is</p>
+<input type="radio" value="switch" name="ten" id="o10-1" onclick=(option10=(this.value))><label for="o10-1">switch</label><br>
+<input type="radio" value="goto" name="ten" id="o10-2" onclick=(option10=(this.value))><label for="o10-2">goto</label><br>
+<input type="radio" value="goback" name="ten" id="o10-3" onclick=(option10=(this.value))><label for="o10-3">goback</label><br>
+<input type="radio" value="return" name="ten" id="o10-4" onclick=(option10=(this.value))><label for="o10-4">return</label><br><br>
+<p>11. Which of the following is not logical operator?</p>
+<input type="radio" value="&" name="eleven" id="o11-1" onclick=(option11=(this.value))><label for="o11-1">&</label><br>
+<input type="radio" value="&&" name="eleven" id="o11-2" onclick=(option11=(this.value))><label for="o11-2">&&</label><br>
+<input type="radio" value="||" name="eleven" id="o11-2" onclick=(option11=(this.value))><label for="o11-3"><b>||</b></label><br>
+<input type="radio" value="!" name="eleven" id="o11-4" onclick=(option11=(this.value))><label for="o11-4">!</label><br><br>
+<p>12. Which of the following cannot be checked in a switch-case statement?</p>
+<input type="radio" value="Character" name="twelve" id="o12-1" onclick=(option12=(this.value))><label for="o12-1">Character</label><br>
+<input type="radio" value="Integer" name="twelve" id="o12-2" onclick=(option12=(this.value))><label for="o12-2">Integer</label><br>
+<input type="radio" value="Float" name="twelve" id="o12-3" onclick=(option12=(this.value))><label for="o12-3">Float</label><br>
+<input type="radio" value="enum" name="twelve" id="o12-4" onclick=(option12=(this.value))><label for="o12-4">Comparator</label><br><br>
+<input type="submit" value="submit" class='btn'>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body{
+            background-color: black;
+            color:aliceblue;
+            text-align: center;
+        }
+        #name
+        {
+           
+            font-size: 5em;
+           color:white;
+           text-shadow: 0px 0px 10px cyan,
+           0px 0px 20px cyan,
+           0px 0px 30px cyan,
+           0px 0px 40px cyan;
+        }
+        #score
+        {
+            border-radius: 50%;
+            width: 16em;
+            color: greenyellow;
+            text-shadow:0px 0px 10px green,
+            0px 0px 20px green,
+            0px 0px 30px green,
+            0px 0px 40px green;
+            font-size:3em;
+            margin-left: 360px;          
+        }
+        #retake
+        {
+            margin-top: 0PX;
+            background-color: transparent;
+            color: white;
+            box-shadow: 0 0 5px #03e9f4,
+            0 0 15px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 100px #03e9f4;
+            width: 8em;
+            font-size: 4em;
+            border: none;
+            border-radius: 8px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+    <script>
+        function showResult() {
+            // Get URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            const score = params.get('score');
+
+            // Display name and score
+            document.getElementById('name').innerText = "Dear "+name;
+            document.getElementById('score').innerText = "Your score is : " + score + "/12";
+        }
+    </script>
+</head>
+<body onload="showResult()">
+    <h1>Thank you for participating</h1>
+    <h1 id="name"></h1>
+    <h2 id="score"></h2>
+    <button id="retake" onclick="window.open('home.html','_self')">Retake the test</button>
+
+</body>
+</html>
